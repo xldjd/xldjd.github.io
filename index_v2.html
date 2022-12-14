@@ -2,14 +2,101 @@
 <html>
 
 <head>
-
+				<link href="css/jquery.contextMenu.min.css" rel="stylesheet"/>
+<style type="text/css">
+	h1{
+		width: 220px;
+		height:50px;
+		text-align: center;
+		border-radius: 10px;
+		margin: 0 auto;
+		color: #32fcc3;
+		box-shadow: 10px 10px 10px #888888;
+	}
+	.tab_ul{
+		width: 1400px;
+		margin:10px auto 10px auto;
+	}
+	.tab_ul li{
+		margin-left: 10px;
+		width: 120px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		float: left;
+		list-style: none;
+		border-radius: 10px;
+		border: #32fcc3 2px solid;
+		box-shadow: 10px 10px 10px #888888;
+	}	
+	.tab_ul li:hover{
+		background-color: #2decb6;
+	}
+    .iframe-0{
+		height:1500px;
+		float: left;
+		width: 100%;
+		margin-top:30px;
+		box-shadow: 1px 2px 6px #888888;	
+	}
+	.iframe-1{
+		height:1500px;
+		float: left;
+	    display: none;
+		width: 100%;
+		margin-top:30px;
+		box-shadow: 1px 2px 6px #888888;	
+	}
+</style>
 </head>
 
 <body class="gray-bg">
-    各个人格
-         
-               
-                        
+    <h1>java基础复习</h1>
+ <div class="tab">
+	 <ul class="tab_ul">
+		 <li id="li_1" class="li_1" onclick="do1()">java语言</li>
+		  <li id="li_2" class="li_2" onclick="do2()">数据库</li>
+		  <li class="li_3"  onclick="do3()">web开发</li>
+		  <li class="li_4">中间件</li>
+		  <li class="li_5">算法与数据结构</li>
+		  <li class="li_6">分布式</li>
+		  <li class="li_7">操作系统</li>
+		  <li class="li_8">计算机网络</li>
+		  <li class="li_9">设计模式</li>
+		  <li class="li_10">场景应用</li>
+	 </ul>
+ </div>
+	<div id="tomyiframe" style="width:100%">
+  <iframe id="iframe-1" class="iframe-0"  src="java-frame/javabase.html"></iframe>
+    <iframe id="iframe-2" class="iframe-1" src="java-frame/li2.html"></iframe>
+	  <iframe id="iframe-3" class="iframe-1"  src="java-frame/li3.html"></iframe>
+	</div>
 </body>
+<script>
 
+	function  do1(){
+		document.getElementById("iframe-2").style.display="none";
+		document.getElementById("iframe-3").style.display="none";
+
+		document.getElementById("iframe-1").style.display="block";
+		document.getElementById("iframe-1").style.visibility=" visible";
+	}
+	function  do2(){
+		document.getElementById("iframe-1").style.display="none";
+		document.getElementById("iframe-3").style.display="none";
+
+		document.getElementById("iframe-2").style.display="block";
+		document.getElementById("iframe-2").style.visibility=" visible";
+	}
+function do3(){
+	document.getElementById("iframe-1").style.display="none";
+	document.getElementById("iframe-2").style.display="none";
+
+	document.getElementById("iframe-3").style.display="block";
+	document.getElementById("iframe-3").style.visibility=" visible";
+}
+
+	
+	
+</script>
 </html>
