@@ -61,7 +61,7 @@
 		  <li id="li_2" class="li_2" onclick="do2()">数据库</li>
 		  <li class="li_3"  onclick="do3()">web开发</li>
 		  <li class="li_4">中间件</li>
-		  <li class="li_5">算法与数据结构</li>
+		  <li class="li_5" onclick="do5()">算法与数据结构</li>
 		  <li class="li_6">分布式</li>
 		  <li class="li_7">操作系统</li>
 		  <li class="li_8">计算机网络</li>
@@ -73,6 +73,7 @@
   <iframe id="iframe-1" class="iframe-0"  src="java-frame/javabase.html"></iframe>
     <iframe id="iframe-2" class="iframe-1" src="java-frame/li2.html"></iframe>
 	  <iframe id="iframe-3" class="iframe-1"  src="java-frame/li3.html"></iframe>
+	  <iframe id="iframe-5" class="iframe-1"  src="java-frame/li5.html"></iframe>
 	</div>
 </body>
 <script>
@@ -80,6 +81,7 @@
 	function  do1(){
 		document.getElementById("iframe-2").style.display="none";
 		document.getElementById("iframe-3").style.display="none";
+		document.getElementById("iframe-5").style.display="none";
 
 		document.getElementById("iframe-1").style.display="block";
 		document.getElementById("iframe-1").style.visibility=" visible";
@@ -87,6 +89,7 @@
 	function  do2(){
 		document.getElementById("iframe-1").style.display="none";
 		document.getElementById("iframe-3").style.display="none";
+		document.getElementById("iframe-5").style.display="none";
 
 		document.getElementById("iframe-2").style.display="block";
 		document.getElementById("iframe-2").style.visibility=" visible";
@@ -94,12 +97,20 @@
 function do3(){
 	document.getElementById("iframe-1").style.display="none";
 	document.getElementById("iframe-2").style.display="none";
+	document.getElementById("iframe-5").style.display="none";
 
 	document.getElementById("iframe-3").style.display="block";
 	document.getElementById("iframe-3").style.visibility=" visible";
 }
 
-	
+function do5(){
+	document.getElementById("iframe-1").style.display="none";
+	document.getElementById("iframe-2").style.display="none";
+	document.getElementById("iframe-3").style.display="none";
+
+	document.getElementById("iframe-5").style.display="block";
+	document.getElementById("iframe-5").style.visibility=" visible";
+}	
 	
 </script>
 </html>
